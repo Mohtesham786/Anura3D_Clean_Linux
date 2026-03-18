@@ -1,0 +1,37 @@
+BeginZE C:/Users/Abdelrahman Alsardi/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/0011_1D_Oedometer_Elasticity_2Phase_MPM_SuddenLoad_Consolidation_Ex2_1a/test-11_2021.gid/test-11_2021.vv
+   x -0.831273794174194336 0.929476261138916016
+   y 1.64587223529815674 -0.644930422306060791
+   z -1.7083122730255127 1.60831236839294434
+   e 0.552770793437957764
+   v -0.0530983954668045044 -0.193595826625823975 -0.0209137778729200363
+   r -0.979420125484466553
+   m 0.924166560173034668 -0.0204074960201978683 0.381444275379180908 0 0.0615260042250156403 0.993486344814300537 -0.0959136337041854858 0 -0.377002298831939697 0.112108916044235229 0.919402420520782471 0 0 0 0 1
+   c 0.0500000007450580597 0.5 0.0500000007450580597
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 1
+   DrawingType 0
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 0
+   OGLShadow(FBOSize) 2048
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE C:/Users/Abdelrahman Alsardi/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/0011_1D_Oedometer_Elasticity_2Phase_MPM_SuddenLoad_Consolidation_Ex2_1a/test-11_2021.gid/test-11_2021.vv
+
+BeginMirror
+   Mirror 0 Angle 0.0 AngleFake -15.0 SizeFactor 2.0 HeightOffset 0.25 Color #d9e5f24d Backlight Off EdgeStyle No Type Scene DrawMode Mirror
+EndMirror
+

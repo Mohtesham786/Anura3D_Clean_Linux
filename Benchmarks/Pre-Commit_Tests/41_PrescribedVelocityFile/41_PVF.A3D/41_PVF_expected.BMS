@@ -1,0 +1,17 @@
+ ---general project data--------------------------------------------------------
+Number of load steps                               1                                      
+Number of elements                              1112                                      
+Number of nodes                                  558                                      
+Number of degrees of freedom                    1116                                      
+Number of entities                                 1                                      
+Number of material points                       3336                                      
+Number of solid material points                 3336                                      
+Number of liquid material points                   0                                      
+Number of phases                                   1                                      
+ ---material point data---------------------------------------------------------
+ LoadStep TimeStep TimePA(1) PA(2) PGravity ID_MP X Y Ux Uy SigmaXX SigmaYY 
+ SigmaZZ SigmaXY WPressureEpsilonXX EpsilonYY EpsilonZZ GammaXY IntWeight MatID 
+           1           1  0.1000E-14   0.000       0.000       0.000               1  0.3333E-01  0.3333E-01  0.5000E-30   0.000       0.000       0.000       0.000       0.000       0.000       0.000       0.000       0.000       0.000      0.6667E-02           1
+           1           1  0.1000E-14   0.000       0.000       0.000              10  0.2887E-01   2.750      0.4286E-30   0.000     -0.3329E-26 -0.1427E-26 -0.1427E-26   0.000       0.000     -0.2473E-29   0.000       0.000       0.000      0.5774E-02           1
+           1           1  0.1000E-14   0.000       0.000       0.000             100  0.6247       4.950       0.000       0.000       0.000       0.000       0.000       0.000       0.000       0.000       0.000       0.000       0.000      0.5774E-02           1
+ ---end-of-file-----------------------------------------------------------------

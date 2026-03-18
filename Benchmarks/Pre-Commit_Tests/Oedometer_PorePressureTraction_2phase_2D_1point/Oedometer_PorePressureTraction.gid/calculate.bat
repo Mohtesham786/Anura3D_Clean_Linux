@@ -1,0 +1,4 @@
+"C:/repository/benchmark/short_benchmarks/Oedometer_PorePressureTraction_2phase_2D_1point/Oedometer_PorePressureTraction.A3D\Anura3D_2021.exe" "C:/repository/benchmark/short_benchmarks/Oedometer_PorePressureTraction_2phase_2D_1point/Oedometer_PorePressureTraction.A3D\Oedometer_PorePressureTraction"
+PAUSE
+6
+

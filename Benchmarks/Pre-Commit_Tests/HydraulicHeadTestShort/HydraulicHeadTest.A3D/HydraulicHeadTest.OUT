@@ -1,0 +1,29 @@
+
+Anura3D: Numerical modelling and simulation of large deformationsand soil–water–structure interaction using the material point method (MPM)
+Kernel name       : Anura3D_2022.exe
+Kernel version    :  9862
+Last update date  :  2022-12-14 15:04:22 +0100 (wo, 14 dec 2022)
+Last compiled date: 2022-12-15 16:14:06.769
+
+Project name: F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest
+Reading CPS file: F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest.CPS_001
+Reading... ### Anura3D_2022 ###
+Reading GOM file (Materials): F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest.GOM
+Reading... ### Anura3D_2022 ###
+[WARNING] : (time step:      1) GOM file: Non-default value for $$BULK_MODULUS_LIQUID (MATERIAL: Sand).
+Darcy permeability is    0.1962E-003 (MATERIAL: Sand).
+Loading constitutive model... mohr_coulomb
+Loading water retention curve model... linear
+Loading hydraulic conductivity curve model... constant
+Reading GOM file (Geometry): F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest.GOM
+Reading... ### Anura3D_2022 ###
+Calculation of load step      1
+ MaxWaveSpeed :    0.1032E+003
+ MinTimeStep  :    0.3468E-002
+ TimeIncrement:    0.3399E-002
+  Item  Name of subroutine/function/procedure        Times Time per call Total time (se Percentage
+     1| Main                                    |        1|   0.4055E+001|   0.4055E+001|100.00%
+     2| Initialisation                          |        1|   0.0000E+000|   0.0000E+000|  0.00%
+     3| LoadStep                                |        1|   0.3993E+001|   0.3993E+001| 98.47%
+     4| WriteResults                            |        1|   0.6780E+000|   0.6780E+000| 16.72%
+Calculation finished.

@@ -1,0 +1,27 @@
+
+Anura3D: Numerical modelling and simulation of large deformationsand soil-water-structure interaction using the material point method (MPM)
+Kernel name       : /mnt/d/Work Files/Linus Compilation/ANURA3D_Linux_Moore/src/Anura3D.out
+Kernel version    : 2022.1.0.10029
+Last update date  : 2023-06-29 15:32:28 +0200 (do, 29 jun 2023)
+Last compiled date: 2023-06-30 09:29:57.817
+
+Project name: LinearLoad
+Reading CPS file: LinearLoad.CPS_001
+Reading... ### Anura3D_2021 ###
+[WARNING] : (time step:      1) CPS file: Default value of $$GRAVITY_ACCELERATION changed.
+Reading GOM file (Materials): LinearLoad.GOM
+Reading... ### Anura3D_2021 ###
+Loading constitutive model... linear_elasticity
+Reading GOM file (Geometry): LinearLoad.GOM
+Reading... ### Anura3D_2021 ###
+Calculation of load step      1
+ MaxWaveSpeed :    0.3162E+002
+ MinTimeStep  :    0.2236E-002
+ TimeIncrement:    0.2191E-002
+Free file space isn't being checked in the name of compiling for Linux - WaveHello
+  Item  Name of subroutine/function/procedure        Times Time per call Total time (se Percentage
+     1| Main                                    |        1|   0.5885E+001|   0.5885E+001|100.00%
+     2| Initialisation                          |        1|   0.0000E+000|   0.0000E+000|  0.00%
+     3| LoadStep                                |        1|   0.5832E+001|   0.5832E+001| 99.11%
+     4| WriteResults                            |        1|   0.5804E+001|   0.5804E+001| 98.63%
+Calculation finished.

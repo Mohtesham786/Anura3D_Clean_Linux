@@ -1,0 +1,51 @@
+
+Anura3D: Numerical modelling and simulation of large deformationsand soil-water-structure interaction using the material point method (MPM)
+Kernel name       : /mnt/d/Work Files/Linus Compilation/ANURA3D_Linux_Moore/src/Anura3D.out
+Kernel version    : 2022.1.0.10029
+Last update date  : 2023-06-29 15:32:28 +0200 (do, 29 jun 2023)
+Last compiled date: 2023-06-30 09:29:57.817
+
+Project name: LinearLoad
+Reading CPS file: LinearLoad.CPS_001
+Reading... ### Anura3D_2021 ###
+Reading flag from CPS file: $$NUMBER_OF_LOADSTEPS
+Reading flag from CPS file: $$TIME_PER_LOADSTEP
+Reading flag from CPS file: $$TOTAL_TIME
+Reading flag from CPS file: $$COURANT_NUMBER
+Reading flag from CPS file: $$COMPUTATION_METHOD
+Reading flag from CPS file: $$GRAVITY_ACCELERATION
+[WARNING] : (time step:      1) CPS file: Default value of $$GRAVITY_ACCELERATION changed.
+Reading flag from CPS file: $$GRAVITY_VECTOR
+Reading flag from CPS file: $$GRAVITY_LOAD
+Reading flag from CPS file: $$SOLID_TRACTION
+Reading flag from CPS file: $$LIQUID_PRESSURE
+Reading flag from CPS file: $$PRESCRIBED_VELOCITY
+Reading flag from CPS file: $$QUASISTATIC_CONVERGENCE
+Reading flag from CPS file: $$TOLERATED_ERROR_SOLID
+Reading flag from CPS file: $$TOLERATED_ERROR_LIQUID
+Reading flag from CPS file: $$MAXIMUM_TIME_STEPS
+Reading flag from CPS file: $$MASS_SCALING
+Reading flag from CPS file: $$HOMOGENEOUS_LOCAL_DAMPING
+Reading flag from CPS file: $$BULK_VISCOSITY_DAMPING
+Reading flag from CPS file: $$FIX_SOLID_SKELETON
+Reading flag from CPS file: $$STRAIN_SMOOTHING
+Reading flag from CPS file: $$CONTACT_FORMULATION
+Reading flag from CPS file: $$INITIAL_WATER_PRESSURE
+Reading flag from CPS file: $$APPLY_POROSITY_UPDATE
+Reading flag from CPS file: $$INITIAL_VELOCITY
+Reading flag from CPS file: $$RESET_DISPLACEMENTS
+Reading flag from CPS file: $$REMOVE_FIXITIES
+Reading flag from CPS file: $$EXCAVATION
+Reading flag from CPS file: $$SUBMERGED_CALCULATION
+Reading flag from CPS file: $$APPLY_OBJECTIVE_STRESS
+Reading flag from CPS file: $$DEGREE_OF_FILLING
+Reading flag from CPS file: $$NUMBER_OF_ACTIVE_ELEMENTS
+Reading flag from CPS file: $$OUTPUT_NUMBER_OF_MATERIAL_POINTS
+Reading flag from CPS file: $$OUTPUT_MATERIAL_POINTS
+Reading flag from CPS file: $$END
+Reading GOM file (Materials): LinearLoad.GOM
+Reading... ### Anura3D_2021 ###
+Loading constitutive model... linear_elasticity
+Reading GOM file (Geometry): LinearLoad.GOM
+Reading... ### Anura3D_2021 ###
+Calculation of load step      1

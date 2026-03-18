@@ -1,0 +1,33 @@
+BeginZE C:/Users/Girardi2/Desktop/codice_anura3D/UnsaturatedFormulationBenchmarks/K0_phreaticSurf_File.gid/K0_phreaticSurf_File.vv
+   x -10.8965892791748047 26.8965892791748047
+   y 10.4504814147949219 -7.45048141479492188
+   z -8.99577140808105469 8.99577140808105469
+   e 8.95048141479492188
+   v 0 0 0
+   r 1
+   m 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1
+   c 7.95839548110961914 1.51789653301239014 0
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 1
+   DrawingType 0
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 0
+   OGLShadow(FBOSize) 2048
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE C:/Users/Girardi2/Desktop/codice_anura3D/UnsaturatedFormulationBenchmarks/K0_phreaticSurf_File.gid/K0_phreaticSurf_File.vv
+

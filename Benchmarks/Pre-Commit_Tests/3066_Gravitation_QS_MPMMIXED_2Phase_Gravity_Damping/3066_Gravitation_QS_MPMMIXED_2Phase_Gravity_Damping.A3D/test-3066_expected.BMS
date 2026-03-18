@@ -1,0 +1,16 @@
+ ---general project data--------------------------------------------------------
+Number of load steps                               1                                      
+Number of elements                               246                                      
+Number of nodes                                  747                                      
+Number of degrees of freedom                    2241                                      
+Number of entities                                 1                                      
+Number of material points                        960                                      
+Number of solid material points                  960                                      
+Number of liquid material points                   0                                      
+Number of phases                                   2                                      
+ ---material point data---------------------------------------------------------
+                  LoadStep                   TimeStep                        Time                     PA(1)                      PA(2)                   PGravity                      ID_MP                          X                          Y                          Z                         Ux                         Uy                         Uz                    SigmaXX                    SigmaYY                    SigmaZZ                    SigmaXY                    SigmaYZ                    SigmaZX                   WPressure                 EpsilonXX                  EpsilonYY                  EpsilonZZ                    GammaXY                    GammaYZ                    GammaZX                  IntWeight                      MatID 
+           1           2  0.9442E-05   0.000       0.000       1.000               5  0.6910E-02  0.1809E-01  0.2155E-01   0.000     -0.1130E-09   0.000     -0.4946E-04 -0.1004E-03 -0.4946E-04 -0.2466E-05  0.2466E-05   0.000     -0.2711E-03   0.000     -0.6778E-08   0.000     -0.6559E-09  0.6559E-09   0.000      0.6510E-06           1
+           1           2  0.9442E-05   0.000       0.000       1.000              15  0.2155E-01  0.1809E-01  0.3455E-02   0.000     -0.1322E-09   0.000     -0.5425E-04 -0.1101E-03 -0.5425E-04   0.000      0.2466E-05   0.000     -0.2974E-03   0.000     -0.7434E-08   0.000       0.000      0.6559E-09   0.000      0.6510E-06           1
+           1           2  0.9442E-05   0.000       0.000       1.000             200  0.6910E-02  0.2069      0.1036E-01   0.000     -0.2186E-09   0.000      0.6545E-39  0.1329E-38  0.6545E-39 -0.1244E-19  0.1244E-19   0.000      0.1345E-38   0.000      0.8968E-43   0.000     -0.3309E-23  0.3309E-23   0.000      0.6510E-06           1
+ ---end-of-file-----------------------------------------------------------------

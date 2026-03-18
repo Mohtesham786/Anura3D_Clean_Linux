@@ -1,0 +1,37 @@
+BeginZE C:/Users/Abdelrahman Alsardi/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/1058_Oedometer_QS_MPMMIXED_2Phase_ObjectiveStress/test-1058.gid/test-1058.vv
+   x -0.372984856367111206 0.471190422773361206
+   y 1.04962289333343506 -0.0486811064183712006
+   z -1.7083122730255127 1.60831236839294434
+   e 0.552770793437957764
+   v 0.0584105812013149261 0.786882698535919189 0.0777004510164260864
+   r -0.609398484230041504
+   m -0.250443518161773682 0.186625629663467407 -0.949973165988922119 0 -0.0027765221893787384 0.981101691722869873 0.193472921848297119 0 0.968127310276031494 0.0510916486382484436 -0.245192378759384155 0 0 0 0 1
+   c 0.0500000007450580597 0.5 0.0500000007450580597
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 1
+   DrawingType 0
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 0
+   OGLShadow(FBOSize) 2048
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE C:/Users/Abdelrahman Alsardi/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/1058_Oedometer_QS_MPMMIXED_2Phase_ObjectiveStress/test-1058.gid/test-1058.vv
+
+BeginMirror
+   Mirror 0 Angle 0.0 AngleFake -15.0 SizeFactor 2.0 HeightOffset 0.25 Color #d9e5f24d Backlight Off EdgeStyle No Type Scene DrawMode Mirror
+EndMirror
+

@@ -1,0 +1,64 @@
+
+Anura3D: Numerical modelling and simulation of large deformationsand soil–water–structure interaction using the material point method (MPM)
+Kernel name       : Anura3D_2022.exe
+Kernel version    :  9862
+Last update date  :  2022-12-14 15:04:22 +0100 (wo, 14 dec 2022)
+Last compiled date: 2022-12-15 16:14:06.769
+
+Project name: F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest
+Reading CPS file: F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest.CPS_001
+Reading... ### Anura3D_2022 ###
+Reading flag from CPS file: $$NUMBER_OF_LOADSTEPS
+Reading flag from CPS file: $$TIME_PER_LOADSTEP
+Reading flag from CPS file: $$TOTAL_TIME
+Reading flag from CPS file: $$COURANT_NUMBER
+Reading flag from CPS file: $$COMPUTATION_METHOD
+Reading flag from CPS file: $$GRAVITY_ACCELERATION
+Reading flag from CPS file: $$GRAVITY_VECTOR
+Reading flag from CPS file: $$GRAVITY_LOAD
+Reading flag from CPS file: $$SOLID_TRACTION
+Reading flag from CPS file: $$SOLID_TRACTION_B
+Reading flag from CPS file: $$LIQUID_PRESSURE
+Reading flag from CPS file: $$LIQUID_PRESSURE_B
+Reading flag from CPS file: $$PRESCRIBED_VELOCITY
+Reading flag from CPS file: $$HYDRAULIC_HEAD
+Reading flag from CPS file: $$APPLY_SEEPAGE_FACE
+Reading flag from CPS file: $$APPLY_INFILTRATION
+Reading flag from CPS file: $$QUASISTATIC_CONVERGENCE
+Reading flag from CPS file: $$TOLERATED_ERROR_SOLID
+Reading flag from CPS file: $$TOLERATED_ERROR_LIQUID
+Reading flag from CPS file: $$MAXIMUM_TIME_STEPS
+Reading flag from CPS file: $$MASS_SCALING
+Reading flag from CPS file: $$HOMOGENEOUS_LOCAL_DAMPING
+Reading flag from CPS file: $$BULK_VISCOSITY_DAMPING
+Reading flag from CPS file: $$FIX_SOLID_SKELETON
+Reading flag from CPS file: $$STRAIN_SMOOTHING
+Reading flag from CPS file: $$APPLY_SMOOTHENING_LIQUID_PRESSURE_INCREMENT
+Reading flag from CPS file: $$CONTACT_FORMULATION
+Reading flag from CPS file: $$INITIAL_WATER_PRESSURE
+Reading flag from CPS file: $$APPLY_POROSITY_UPDATE
+Reading flag from CPS file: $$INITIAL_VELOCITY
+Reading flag from CPS file: $$RESET_DISPLACEMENTS
+Reading flag from CPS file: $$REMOVE_FIXITIES
+Reading flag from CPS file: $$K0_PROCEDURE
+Reading flag from CPS file: $$SURFACE_ELEVATION
+Reading flag from CPS file: $$INITIAL_VERTICAL_LOAD_K0
+Reading flag from CPS file: $$EXCAVATION
+Reading flag from CPS file: $$SUBMERGED_CALCULATION
+Reading flag from CPS file: $$APPLY_OBJECTIVE_STRESS
+Reading flag from CPS file: $$DEGREE_OF_FILLING
+Reading flag from CPS file: $$NUMBER_OF_ACTIVE_ELEMENTS
+Reading flag from CPS file: $$VISUALIZATION_OPTION
+Reading flag from CPS file: $$OUTPUT_NUMBER_OF_MATERIAL_POINTS
+Reading flag from CPS file: $$OUTPUT_MATERIAL_POINTS
+Reading flag from CPS file: $$END
+Reading GOM file (Materials): F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest.GOM
+Reading... ### Anura3D_2022 ###
+[WARNING] : (time step:      1) GOM file: Non-default value for $$BULK_MODULUS_LIQUID (MATERIAL: Sand).
+Darcy permeability is    0.1962E-003 (MATERIAL: Sand).
+Loading constitutive model... mohr_coulomb
+Loading water retention curve model... linear
+Loading hydraulic conductivity curve model... constant
+Reading GOM file (Geometry): F:\Anura3D\Anura3D_benchmarks_Test_bench\Pre-Commit_Tests\HydraulicHeadTestShort\HydraulicHeadTest.A3D\HydraulicHeadTest.GOM
+Reading... ### Anura3D_2022 ###
+Calculation of load step      1

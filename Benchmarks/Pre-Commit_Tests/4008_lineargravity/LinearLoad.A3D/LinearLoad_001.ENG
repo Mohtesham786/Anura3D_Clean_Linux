@@ -1,0 +1,3 @@
+            LoadStep            TimeStep       KineticEnergy        InternalWork        ExternalWork         Dissipation        KineticError          ForceError             TimeInc            RealTime
+                   1                   1       0.1771707E-57       0.1461987E-83       0.3592815E-57        0.000000           0.4931250            1.000000           0.1000000E-14       0.1000000E-14
+                   1                   2       0.2553384E-09       0.1011789E-10       0.2071186E-08        0.000000           0.1232812            1.000000           0.2191347E-02       0.2191347E-02

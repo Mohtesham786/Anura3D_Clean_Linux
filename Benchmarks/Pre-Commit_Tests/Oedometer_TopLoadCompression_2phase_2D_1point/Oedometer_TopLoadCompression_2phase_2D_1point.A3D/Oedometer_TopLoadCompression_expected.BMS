@@ -1,0 +1,19 @@
+ ---general project data--------------------------------------------------------
+Number of load steps                               1                                      
+Number of elements                                22                                      
+Number of nodes                                   24                                      
+Number of degrees of freedom                      48                                      
+Number of entities                                 1                                      
+Number of material points                         60                                      
+Number of solid material points                   60                                      
+Number of liquid material points                   0                                      
+Number of phases                                   1                                      
+ ---material point data---------------------------------------------------------
+ LoadStep TimeStep TimePA PGravity ID_MP X Y Ux Uy SigmaXX SigmaYY SigmaZZ 
+ SigmaXY WPressureEpsilonXX EpsilonYY EpsilonZZ GammaXY IntWeight MatID 
+           1          70  0.5000E-01   1.000       0.000               3  0.3333E-01  0.1656E-01   0.000     -0.1056E-03  -36.67      -85.56      -36.67       0.000       0.000       0.000     -0.6356E-02   0.000       0.000      0.1656E-02           1
+           1          70  0.5000E-01   1.000       0.000              15  0.3333E-01  0.2153       0.000     -0.1380E-02  -37.05      -86.45      -37.05     -0.5933E-01   0.000       0.000     -0.6422E-02   0.000     -0.1543E-04  0.1656E-02           1
+           1          70  0.5000E-01   1.000       0.000              24  0.1667E-01  0.3312       0.000     -0.2132E-02  -37.34      -87.14      -37.34      0.1476       0.000       0.000     -0.6473E-02   0.000      0.3837E-04  0.1656E-02           1
+           1          70  0.5000E-01   1.000       0.000              29  0.1667E-01  0.4802       0.000     -0.3108E-02  -38.01      -88.70      -38.01      0.3770       0.000       0.000     -0.6589E-02   0.000      0.9802E-04  0.1656E-02           1
+           1          70  0.5000E-01   1.000       0.000              57  0.3333E-01  0.9106       0.000     -0.6115E-02  -42.97      -100.3      -42.97      0.9287E-01   0.000       0.000     -0.7448E-02   0.000      0.2415E-04  0.1654E-02           1
+ ---end-of-file-----------------------------------------------------------------

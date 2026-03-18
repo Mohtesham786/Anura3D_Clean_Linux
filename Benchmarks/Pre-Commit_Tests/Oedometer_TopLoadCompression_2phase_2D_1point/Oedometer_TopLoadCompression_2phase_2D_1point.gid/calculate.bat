@@ -1,0 +1,4 @@
+"C:/repository/benchmark/short_benchmarks/Oedometer_TopLoadCompression_2phase_2D_1point/Oedometer_TopLoadCompression_2phase_2D_1point.A3D\Anura3D_2021.exe" "C:/repository/benchmark/short_benchmarks/Oedometer_TopLoadCompression_2phase_2D_1point/Oedometer_TopLoadCompression_2phase_2D_1point.A3D\Oedometer_TopLoadCompression_2phase_2D_1point"
+PAUSE
+6
+

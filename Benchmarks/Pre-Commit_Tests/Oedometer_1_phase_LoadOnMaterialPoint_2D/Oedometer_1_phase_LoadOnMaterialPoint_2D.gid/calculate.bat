@@ -1,0 +1,4 @@
+"C:/Users/gemsr2/AnuraWork/updating_files/Small-1phase_2D/Oedometer_1_phase_LoadOnMaterialPoint_2D/Oedometer_1_phase_LoadOnMaterialPoint_2D.A3D\Anura3D_2021.exe" "C:/Users/gemsr2/AnuraWork/updating_files/Small-1phase_2D/Oedometer_1_phase_LoadOnMaterialPoint_2D/Oedometer_1_phase_LoadOnMaterialPoint_2D.A3D\Oedometer_1_phase_LoadOnMaterialPoint_2D"
+PAUSE
+6
+

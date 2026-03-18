@@ -1,0 +1,37 @@
+BeginZE C:/Users/Abdelrahman Alsardi/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/2053_Oedometer_DYN_ULFEM_2Phase_NormalStress/2053_GID.gid/2053_GID.vv
+   x -0.00316704856231808662 0.00460531236603856087
+   y 0.50505596399307251 0.494943827390670776
+   z -0.82965618371963501 0.828656136989593506
+   e 0.276385396718978882
+   v -0.435545533895492554 -0.146247953176498413 -0.130189716815948486
+   r 0.878613829612731934
+   m 0.923324346542358398 0.356168270111083984 -0.14358384907245636 0 -0.101377688348293304 0.586701452732086182 0.803432583808898926 0 0.370398044586181641 -0.727272689342498779 0.577823281288146973 0 0 0 0 1
+   c 0.000500000023748725653 0.5 0.000500000023748725653
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 1
+   DrawingType 0
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 1
+   OGLShadow(FBOSize) 0
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE C:/Users/Abdelrahman Alsardi/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/2053_Oedometer_DYN_ULFEM_2Phase_NormalStress/2053_GID.gid/2053_GID.vv
+
+BeginMirror
+   Mirror 0 Angle 0.0 AngleFake -15.0 SizeFactor 2.0 HeightOffset 0.25 Color #d9e5f24d Backlight Off EdgeStyle No Type Scene DrawMode Mirror
+EndMirror
+

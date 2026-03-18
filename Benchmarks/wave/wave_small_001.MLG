@@ -1,0 +1,9 @@
+ MaxWaveSpeed :    0.7071E+007
+ MinTimeStep  :    0.6646E-011
+ TimeIncrement:    0.1000E-009
+  Item  Name of subroutine/function/procedure        Times Time per call Total time (se Percentage
+     1| Main                                    |        1|   0.8441E+001|   0.8441E+001|100.00%
+     2| Initialisation                          |        1|   0.0000E+000|   0.0000E+000|  0.00%
+     3| LoadStep                                |        1|   0.8355E+001|   0.8355E+001| 98.98%
+     4| WriteResults                            |        1|   0.7957E+001|   0.7957E+001| 94.26%
+Calculation finished.

@@ -1,0 +1,33 @@
+BeginZE C:/Users/aa156/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/5022_Excavation_Oedometer_LinearElasticity_2D/5022_Excavation_Excavation.gid/5022_Excavation_Excavation.vv
+   x -5.10223913192749023 6.10223913192749023
+   y 5.79023933410644531 -0.290239334106445313
+   z -9.12071800231933594 9.12071800231933594
+   e 3.04023933410644531
+   v 0 0 0
+   r 1
+   m 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1
+   c 0.875 2.5625 0
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 1
+   DrawingType 0
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 1
+   OGLShadow(FBOSize) 2048
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE C:/Users/aa156/OneDrive/Documents/Research projects/8_BuildServer_Benchmarks_August2021/FinalBenchmarks/5022_Excavation_Oedometer_LinearElasticity_2D/5022_Excavation_Excavation.gid/5022_Excavation_Excavation.vv
+

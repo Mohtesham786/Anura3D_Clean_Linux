@@ -1,0 +1,18 @@
+ ---general project data--------------------------------------------------------
+Number of load steps                               1                                      
+Number of elements                               660                                      
+Number of nodes                                  372                                      
+Number of degrees of freedom                     744                                      
+Number of entities                                 1                                      
+Number of material points                        600                                      
+Number of solid material points                  600                                      
+Number of liquid material points                   0                                      
+Number of phases                                   2                                      
+ ---material point data---------------------------------------------------------
+ LoadStep,TimeStep,MP_ID,X,Y,Z
+    1        41       433    0.9352628860        0.1660159188E-01
+    1        41       438    0.1667141028E-01    0.9823431314    
+    1        41       505    0.4167427211        0.9322574859    
+    1        41       538    0.9339772887        0.5154050101    
+    1        41       595    0.9168423675        0.9319379036    
+ ---end-of-file-----------------------------------------------------------------

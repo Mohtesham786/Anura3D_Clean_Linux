@@ -1,0 +1,37 @@
+BeginZE C:/Users/gemsr2/AnuraWork/updating_files/Small-1phase_3D/0005_1D_Oedometer_Elasticity_1Phase_ULFEM_Ex2_1b/0005_Oedometer.gid/0005_Oedometer.vv
+   x -0.588077366352081299 0.53668665885925293
+   y 1.02851593494415283 -0.19900888204574585
+   z -1.7083122730255127 1.60831236839294434
+   e 0.552770793437957764
+   v 0.16300731897354126 -0.288099706172943115 -0.0558168664574623108
+   r -0.941972255706787109
+   m 0.827766060829162598 -0.199080601334571838 0.524566709995269775 0 0.0112311597913503647 0.940626204013824463 0.339258372783660889 0 -0.560960948467254639 -0.274935096502304077 0.780854344367980957 0 0 0 0 1
+   c 0.0500000007450580597 0.5 0.0500000007450580597
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 1
+   DrawingType 0
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 0
+   OGLShadow(FBOSize) 2048
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE C:/Users/gemsr2/AnuraWork/updating_files/Small-1phase_3D/0005_1D_Oedometer_Elasticity_1Phase_ULFEM_Ex2_1b/0005_Oedometer.gid/0005_Oedometer.vv
+
+BeginMirror
+   Mirror 0 Angle 0.0 AngleFake -15.0 SizeFactor 2.0 HeightOffset 0.25 Color #d9e5f24d Backlight Off EdgeStyle No Type Scene DrawMode Mirror
+EndMirror
+

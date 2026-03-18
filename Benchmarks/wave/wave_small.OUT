@@ -1,0 +1,29 @@
+
+Anura3D: Numerical modelling and simulation of large deformationsand soil-water-structure interaction using the material point method (MPM)
+Kernel name       : ../../src/Anura3D.out
+Kernel version    : 2022.1.0.10029
+Last update date  : 2023-06-29 15:32:28 +0200 (do, 29 jun 2023)
+Last compiled date: 2023-06-30 09:29:57.817
+
+Project name: wave_small
+Reading CPS file: wave_small.CPS_001
+Reading... ### Anura3D_2022 ###
+[WARNING] : (time step:      1) CPS file: Default value of $$GRAVITY_ACCELERATION changed.
+Reading GOM file (Materials): wave_small.GOM
+Reading... ### Anura3D_2022 ###
+[WARNING] : (time step:      1) GOM file: Non-default value for $$BULK_MODULUS_LIQUID (MATERIAL: default_material).
+Darcy permeability is    0.9810E-003 (MATERIAL: default_material).
+[WARNING] : (time step:      1) bulk modulus of liquid seems to be high, K:   0.2000E+007
+Loading constitutive model... linear_elasticity
+Reading GOM file (Geometry): wave_small.GOM
+Reading... ### Anura3D_2022 ###
+Calculation of load step      1
+ MaxWaveSpeed :    0.7071E+007
+ MinTimeStep  :    0.6646E-011
+ TimeIncrement:    0.1000E-009
+  Item  Name of subroutine/function/procedure        Times Time per call Total time (se Percentage
+     1| Main                                    |        1|   0.8441E+001|   0.8441E+001|100.00%
+     2| Initialisation                          |        1|   0.0000E+000|   0.0000E+000|  0.00%
+     3| LoadStep                                |        1|   0.8355E+001|   0.8355E+001| 98.98%
+     4| WriteResults                            |        1|   0.7957E+001|   0.7957E+001| 94.26%
+Calculation finished.

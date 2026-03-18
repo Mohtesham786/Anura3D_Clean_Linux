@@ -1,0 +1,10 @@
+ MaxWaveSpeed :    0.3162E+002
+ MinTimeStep  :    0.2236E-002
+ TimeIncrement:    0.2191E-002
+Free file space isn't being checked in the name of compiling for Linux - WaveHello
+  Item  Name of subroutine/function/procedure        Times Time per call Total time (se Percentage
+     1| Main                                    |        1|   0.5885E+001|   0.5885E+001|100.00%
+     2| Initialisation                          |        1|   0.0000E+000|   0.0000E+000|  0.00%
+     3| LoadStep                                |        1|   0.5832E+001|   0.5832E+001| 99.11%
+     4| WriteResults                            |        1|   0.5804E+001|   0.5804E+001| 98.63%
+Calculation finished.

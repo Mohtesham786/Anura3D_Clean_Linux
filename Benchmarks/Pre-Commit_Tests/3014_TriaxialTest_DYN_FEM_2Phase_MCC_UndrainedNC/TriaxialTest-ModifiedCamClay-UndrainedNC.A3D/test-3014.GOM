@@ -1,0 +1,350 @@
+### Anura3D_2021 ###        
+$$DIMENSION
+3D-cartesian
+$$ELEMENTTYPE
+tetrahedral_old
+$$FORMULATION
+single-point
+$$STARTCOUNTERS
+6 27
+$$STARTNODES
+           0            1            1
+           0            1          0.5
+           0          0.5            1
+         0.5            1            1
+           0          0.5          0.5
+         0.5            1          0.5
+         0.5          0.5            1
+         0.5          0.5          0.5
+           0            0            1
+           1            1            1
+           0            1            0
+           0            0          0.5
+         0.5            1            0
+           1          0.5            1
+           0          0.5            0
+           1            1          0.5
+         0.5            0            1
+         0.5          0.5            0
+         0.5            0          0.5
+           1          0.5          0.5
+           0            0            0
+           1            1            0
+           1            0            1
+         0.5            0            0
+           1          0.5            0
+           1            0          0.5
+           1            0            0
+$$STARTELEMCON
+11 10 1 21 6 4 2 15 8 5
+10 23 1 21 14 7 4 8 19 5
+21 9 23 1 12 17 19 5 3 7
+10 11 22 21 6 13 16 8 15 18
+10 23 21 27 14 19 8 20 26 24
+22 21 27 10 18 24 25 16 8 20
+$$START_FIXITY_SURFACE_SOLID
+9
+9 0 1 0
+12 0 1 0
+17 0 1 0
+19 0 1 0
+21 0 1 0
+23 0 1 0
+24 0 1 0
+26 0 1 0
+27 0 1 0
+$$START_FIXITY_LINE_SOLID
+0
+$$START_FIXITY_POINT_SOLID
+0
+$$START_FIXITY_SURFACE_LIQUID
+0
+$$START_FIXITY_LINE_LIQUID
+0
+$$START_FIXITY_POINT_LIQUID
+0
+$$START_FIXITY_SURFACE_GAS
+0
+$$START_FIXITY_LINE_GAS
+0
+$$START_FIXITY_POINT_GAS
+0
+$$START_REMOVE_FIXITY_SURFACE_SOLID
+0
+$$START_REMOVE_FIXITY_LINE_SOLID
+0
+$$START_REMOVE_FIXITY_POINT_SOLID
+0
+$$START_REMOVE_FIXITY_SURFACE_LIQUID
+0
+$$START_REMOVE_FIXITY_LINE_LIQUID
+0
+$$START_REMOVE_FIXITY_POINT_LIQUID
+0
+$$START_REMOVE_FIXITY_SURFACE_GAS
+0
+$$START_REMOVE_FIXITY_LINE_GAS
+0
+$$START_REMOVE_FIXITY_POINT_GAS
+0
+$$PRESCRIBED_NODAL_VELOCITY_SURFACE
+9
+1 0 1 0 0.0 -0.01 0.0
+2 0 1 0 0.0 -0.01 0.0
+4 0 1 0 0.0 -0.01 0.0
+6 0 1 0 0.0 -0.01 0.0
+10 0 1 0 0.0 -0.01 0.0
+11 0 1 0 0.0 -0.01 0.0
+13 0 1 0 0.0 -0.01 0.0
+16 0 1 0 0.0 -0.01 0.0
+22 0 1 0 0.0 -0.01 0.0
+$$START_LOAD_ON_NODES_SOLID
+8
+1 21 11 5 15 2          100            0            0          100            0            0          100            0            0          100            0            0          100            0            0          100            0            0
+10 23 1 14 7 4            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100
+1 9 21 3 12 5          100            0            0          100            0            0          100            0            0          100            0            0          100            0            0          100            0            0
+9 1 23 3 7 17            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100
+11 21 22 15 18 13            0            0          100            0            0          100            0            0          100            0            0          100            0            0          100            0            0          100
+27 23 10 26 14 20         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0
+27 10 22 20 16 25         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0         -100            0            0
+22 21 27 18 24 25            0            0          100            0            0          100            0            0          100            0            0          100            0            0          100            0            0          100
+$$START_CONTACT_VOLUME
+0
+$$NUMBER_OF_MATERIALS
+1
+$$MATERIAL_INDEX
+1
+$$MATERIAL_NAME
+default_material
+$$MATERIAL_TYPE
+saturated_material_undrained_effective
+$$POROSITY_SOLID
+0.655
+$$DENSITY_SOLID 
+2600.0
+$$DENSITY_LIQUID
+1000.0
+$$K0_VALUE_SOLID
+1.0
+$$MATERIAL_MODEL_SOLID
+external_soil_model
+$$MATERIAL_MODEL_DLL
+A3DModifiedCamClay
+$$UMAT_DIMENSION
+full_3D_(default)
+$$MATERIAL_PARAMETER_SOLID_01
+1.2
+$$MATERIAL_PARAMETER_SOLID_02
+0.2
+$$MATERIAL_PARAMETER_SOLID_03
+0.06
+$$MATERIAL_PARAMETER_SOLID_04
+0.3
+$$MATERIAL_PARAMETER_SOLID_05
+1.9
+$$MATERIAL_PARAMETER_SOLID_06
+1
+$$MATERIAL_PARAMETER_SOLID_07
+0.495
+$$MATERIAL_PARAMETER_SOLID_08
+0.0
+$$MATERIAL_PARAMETER_SOLID_09
+0.0
+$$MATERIAL_PARAMETER_SOLID_10
+0.0
+$$MATERIAL_PARAMETER_SOLID_11
+0.0
+$$MATERIAL_PARAMETER_SOLID_12
+0.0
+$$MATERIAL_PARAMETER_SOLID_13
+0.0
+$$MATERIAL_PARAMETER_SOLID_14
+0.0
+$$MATERIAL_PARAMETER_SOLID_15
+0.0
+$$MATERIAL_PARAMETER_SOLID_16
+0.0
+$$MATERIAL_PARAMETER_SOLID_17
+0.0
+$$MATERIAL_PARAMETER_SOLID_18
+0.0
+$$MATERIAL_PARAMETER_SOLID_19
+0.0
+$$MATERIAL_PARAMETER_SOLID_20
+0.0
+$$MATERIAL_PARAMETER_SOLID_21
+0.0
+$$MATERIAL_PARAMETER_SOLID_22
+0.0
+$$MATERIAL_PARAMETER_SOLID_23
+0.0
+$$MATERIAL_PARAMETER_SOLID_24
+0.0
+$$MATERIAL_PARAMETER_SOLID_25
+0.0
+$$MATERIAL_PARAMETER_SOLID_26
+0.0
+$$MATERIAL_PARAMETER_SOLID_27
+0.0
+$$MATERIAL_PARAMETER_SOLID_28
+0.0
+$$MATERIAL_PARAMETER_SOLID_29
+0.0
+$$MATERIAL_PARAMETER_SOLID_30
+0.0
+$$MATERIAL_PARAMETER_SOLID_31
+0.0
+$$MATERIAL_PARAMETER_SOLID_32
+0.0
+$$MATERIAL_PARAMETER_SOLID_33
+0.0
+$$MATERIAL_PARAMETER_SOLID_34
+0.0
+$$MATERIAL_PARAMETER_SOLID_35
+0.0
+$$MATERIAL_PARAMETER_SOLID_36
+0.0
+$$MATERIAL_PARAMETER_SOLID_37
+0.0
+$$MATERIAL_PARAMETER_SOLID_38
+0.0
+$$MATERIAL_PARAMETER_SOLID_39
+0.0
+$$MATERIAL_PARAMETER_SOLID_40
+0.0
+$$MATERIAL_PARAMETER_SOLID_41
+0.0
+$$MATERIAL_PARAMETER_SOLID_42
+0.0
+$$MATERIAL_PARAMETER_SOLID_43
+0.0
+$$MATERIAL_PARAMETER_SOLID_44
+0.0
+$$MATERIAL_PARAMETER_SOLID_45
+0.0
+$$MATERIAL_PARAMETER_SOLID_46
+0.0
+$$MATERIAL_PARAMETER_SOLID_47
+0.0
+$$MATERIAL_PARAMETER_SOLID_48
+0.0
+$$MATERIAL_PARAMETER_SOLID_49
+0.0
+$$MATERIAL_PARAMETER_SOLID_50
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_01
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_02
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_03
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_04
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_05
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_06
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_07
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_08
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_09
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_10
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_11
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_12
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_13
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_14
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_15
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_16
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_17
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_18
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_19
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_20
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_21
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_22
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_23
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_24
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_25
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_26
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_27
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_28
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_29
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_30
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_31
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_32
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_33
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_34
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_35
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_36
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_37
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_38
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_39
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_40
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_41
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_42
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_43
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_44
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_45
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_46
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_47
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_48
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_49
+0.0
+$$INITIAL_STATE_VARIABLE_SOLID_50
+0.0
+$$STARTELMMAT
+1 
+1 
+1 
+1 
+1 
+1 
+$$START_NUMBER_OF_MATERIAL_POINTS
+0 0 
+0 0 
+0 0 
+0 0 
+0 0 
+0 0 
+
+$$FINISH

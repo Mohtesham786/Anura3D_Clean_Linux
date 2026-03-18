@@ -1,0 +1,4 @@
+"C:/Users/Kaleigh/Desktop/new_benchmarks/4005_foundation_k0_movingmesh_steploadonMP/4005_foundation_k0_movingmesh_steploadonMP.A3D\Anura3D_2021.exe" "C:/Users/Kaleigh/Desktop/new_benchmarks/4005_foundation_k0_movingmesh_steploadonMP/4005_foundation_k0_movingmesh_steploadonMP.A3D\4005_foundation_k0_movingmesh_steploadonMP"
+PAUSE
+6
+
