@@ -30,9 +30,9 @@ jobs:
       - name: Build Fortran code using Makefile
         run: |
           cd src
-           make clean || true
-           ifort --version || true
-           make fortran_compiler=ifort FFLAGS="-O2" 2>&1 | tee build.log
+          make clean || true
+          ifort --version || true
+          make fortran_compiler=ifort FFLAGS="-O2" 2>&1 | tee build.log
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -47,24 +47,44 @@ jobs:
       - name: Run Benchmark wave_small
         run: |
           cd Benchmarks/wave
-          rm -f run_wave_small.log wave_small_001.ENG wave_small_001.INF wave_small_000.MLG wave_small_001.MLG wave_small.PAR_001 wave_small.BMR wave_small.BMS wave_small.OUT wave_small.BRF_001 || true
 
-          ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small.log
+          rm -f run_wave_small_step1.log run_wave_small_step2.log \
+                wave_small_001.ENG wave_small_001.INF \
+                wave_small_000.MLG wave_small_001.MLG \
+                wave_small.PAR_001 wave_small.BMR wave_small.BMS \
+                wave_small.OUT wave_small.BRF_001 || true
 
-          echo "==== current folder ===="
-          pwd
-
-          echo "==== wave folder contents ===="
+          echo "==== initial wave folder contents ===="
           ls -lah
 
-          echo "==== find ENG files ===="
-          find . -maxdepth 2 \( -name "*.ENG" -o -name "*.INF" -o -name "*.MLG" -o -name "*.OUT" \)
+          echo "==== STEP 1: run CPS_001 only ===="
+          mv wave_small.CPS_002 wave_small.CPS_002.bak
+          ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small_step1.log
 
-          # FAIL CI if simulation did not generate ENG file
+          echo "==== after STEP 1 ===="
+          ls -lah
+
+          if [ ! -f wave_small.BRF_001 ]; then
+            echo "ERROR: STEP 1 did not generate wave_small.BRF_001"
+            exit 1
+          fi
+
+          mv wave_small.CPS_002.bak wave_small.CPS_002
+
+          echo "==== STEP 2: run CPS_002 using generated BRF_001 ===="
+          ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small_step2.log
+
+          echo "==== final wave folder contents ===="
+          ls -lah
+
+          echo "==== find result files ===="
+          find . -maxdepth 2 \( -name "*.ENG" -o -name "*.INF" -o -name "*.MLG" -o -name "*.OUT" -o -name "*.BRF_*" \)
+
           if [ ! -f wave_small_001.ENG ]; then
             echo "ERROR: Simulation did not produce wave_small_001.ENG"
             exit 1
           fi
+          
       - name: Run all pre-commit benchmarks
         run: |
           benchmark_root="$GITHUB_WORKSPACE/Benchmarks/Pre-Commit_Tests"
