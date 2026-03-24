@@ -43,7 +43,7 @@
       use ModGlobalConstants
       use ModReadCalculationData
       use ModString
-      use kernel32
+    ! use kernel32
       use ModFileIO
       use ModLinearElasticity
       use ModMohrCoulomb
@@ -67,7 +67,7 @@
           character(len=64) :: &
                  SoilModelDLL = "UNDEFINED", &   ! name of the external DLL containing the soil consititutive model in UMAT/VUMAT
                  SoilModelName = "UNDEFINED"   ! name of the external soil consititutive model
-          integer(handle) :: SoilModelDLLHandle ! This is handle to dll
+          integer(8) :: SoilModelDLLHandle ! This is handle to dll
           
           real(REAL_TYPE) :: &
                  InitialPorosity = 0.0, & ! initial porosity n_0
@@ -256,7 +256,7 @@ end select
           integer(INTEGER_TYPE), dimension(:), allocatable :: NumberofPhases
           real(REAL_TYPE) :: n, nu_u, nu_eff, E
           integer :: umat
-          integer(handle) :: lib_handle
+          integer(8) :: lib_handle
           pointer (p, umat)
           integer(INTEGER_TYPE) :: K = 1          
           
@@ -869,16 +869,9 @@ end select
                   MatParams(I)%SoilModelName = DumS
                   !if (MatParams(I)%SoilModelName=="MyModel")  MatParams(I)%ESM_POINTER => ESM_Mymodel  !Example of the pointer definition
                   !if (MatParams(I)%SoilModelName=="MyModel2")  MatParams(I)%ESM_POINTER => ESM_Mymodel2  !Example of the pointer definition
-                  else  
+                  else
                   MatParams(I)%SoilModelDLL = DumS
-                  lib_handle = loadlibrary(trim(DumS)//char(0))
-                  if (lib_handle == 0) call Error_NoDLL(DumS) ! error handling
-                  
-                  ! initialise UMAT  This is just for a check to see if no error
-                    p = GetProcAddress(lib_handle, "ESM"C) ! TODO: Check to see if multiple materials works ?
-                    if (p == 0) call Error_NoUMAT(DumS) ! error handling
-                  
-                  MatParams(I)%SoilModelDLLHandle = lib_handle
+                  call GiveError('External DLL soil models are not supported in this Linux open-source build.')
                   end if
 
                   

@@ -1,3 +1,4 @@
+.NOTPARALLEL:
 # Disable all of make's built-in rules (similar to Fortran's implicit none)
 MAKEFLAGS += --no-builtin-rules --no-builtin-variables
 
@@ -13,7 +14,7 @@ ifeq ($(OS),Windows_NT)
     EXE = .exe
 else
     # Assume Linux
-    compiler_flags := -O0 -g -traceback -check all -warn all -free
+    compiler_flags := -O0 -g -traceback -check all -warn all -free -fpp
     EXE = .out
 endif 
 
@@ -21,87 +22,86 @@ endif
 remove_files_command := rm -f
 
 # list of all source files
-source_files := GlobalConstants.f90\
-                A3DLinearElasticity.f90\
-                A3DMohrCoulombStandard.f90\
-                MCSS_Soil_Model.f90\
-                GeoMath.f90\
-                MatrixMath.f90\
-                FileIO.f90\
-                String.f90\
-                Counters.f90\
-                Feedback.f90\
-                ReadCalculationData.f90\
-                ElemCalcTETRA.f90\
-                ElemCalcQUAD.f90\
-                ReadMaterialData.f90\
-                ElemCalcTRI.f90\
-                getversion.f90\
-                InitialiseKernel.f90\
-                ElemCalc.f90\
-                MeshInfo.f90\
-                ReadGeometryData.f90\
-                ISORT.f90\
-                ElemConnections.f90\
-                Particle.f90\
-                MPMData.f90\
-                RotBoundCond.f90\
-                MPMStresses.f90\
-                MPMDynViscousBoundary.f90\
-                TwoLayerFormulation.f90\
-                MPMDYN2PhaseSP.f90\
-                MPMDYN3PhaseSP.f90\
-                MPMDynContact.f90\
-                ReadMPMData.f90\
-                WriteMPMData.f90\
-                MPMMeshAdjustment.f90\
-                MPMConvPhase.f90\
-                WriteTestData.f90\
-                MPMEmptyElements.f90\
-                AdjustParticleDiscretisation.f90\
-                MPMInit.f90\
-                MPMDYNBTSig.f90\
-                RigidBody.f90\
-                LagrangianPhase.f90\
-                Liquid.f90\
-                ExternalSoilModel.f90\
-                MPMStrainSmoothing.f90\
-                MPMDYNStresses.f90\
-                MPMDYNConvPhase.f90\
-                MPMExcavation.f90\
-                BuildBJacDet.f90\
-                BuildDElastic.f90\
-                BuildLoad.f90\
-                GetPrinStress.f90\
-                GetStrain.f90\
-                InitialiseElementType.f90\
-                timing.f90\
-                WriteVTKASCII.f90\
-                WriteVTKBinary.f90\
-                WriteVTKOutput.f90\
-                WriteVTK2Layer.f90\
-                WriteNodalData.f90\
-                WriteResultData.f90\
-                ErrorHandler.f90\
-                MPMDynamicExplicit.f90\
-                Kernel.f90\
-                Anura3D.f90
-
-# Object files
-object_files := $(patsubst %.f90,%.obj,$(source_files))
+source_files := ./GlobalConstants.FOR \
+        ./Soilmodels/A3DLinearElasticity.f \
+        ./Soilmodels/A3DMohrCoulombStandard.f \
+        ./GeoMath.FOR \
+        ./MatrixMath.FOR \
+        ./FileIO.for \
+        ./String.for \
+        ./Counters.FOR \
+        ./Feedback.for \
+        ./ReadCalculationData.FOR \
+        ./ElemCalcTETRA.FOR \
+        ./ElemCalcQUAD.FOR \
+        ./Soilmodels/A3DBingham.f \
+        ./ReadMaterialData.FOR \
+        ./ElemCalcTRI.FOR \
+        ./getversion.for \
+        ./InitialiseKernel.FOR \
+        ./ElemCalc.FOR \
+        ./MeshInfo.FOR \
+        ./ReadGeometryData.FOR \
+        ./ISORT.FOR \
+        ./ElemConnections.FOR \
+        ./Particle.FOR \
+        ./MPMData.FOR \
+        ./RotBoundCond.FOR \
+        ./MPMStresses.FOR \
+        ./MPMDynViscousBoundary.FOR \
+        ./TwoLayerFormulation.FOR \
+        ./MPMDYN2PhaseSP.FOR \
+        ./MPMDYN3PhaseSP.FOR \
+        ./MPMDynContact.FOR \
+        ./ReadMPMData.FOR \
+        ./WriteMPMData.FOR \
+        ./MPMMeshAdjustment.FOR \
+        ./MPMConvPhase.FOR \
+        ./WriteTestData.FOR \
+        ./MPMEmptyElements.FOR \
+        ./InitialiseElementType.for \
+        ./AdjustParticleDiscretisation.FOR \
+        ./MPMInit.FOR \
+        ./MPMDYNBTSig.FOR \
+        ./RigidBody.f \
+        ./LagrangianPhase.FOR \
+        ./Liquid.FOR \
+        ./ExternalSoilModel.for \
+        ./MPMStrainSmoothing.FOR \
+        ./MPMDYNStresses.FOR \
+        ./MPMDYNConvPhase.FOR \
+        ./MPMExcavation.FOR \
+        ./BuildBJacDet.FOR \
+        ./BuildDElastic.FOR \
+        ./BuildLoad.FOR \
+        ./GetPrinStress.FOR \
+        ./GetStrain.FOR \
+        ./timing.for \
+        ./ReadOutputData.FOR \
+        ./WriteVTKASCII.FOR \
+        ./WriteVTKBinary.FOR \
+        ./WriteVTKOutput.FOR \
+        ./WriteVTK2Layer.FOR \
+        ./WriteNodalData.FOR \
+        ./WriteResultData.FOR \
+        ./ErrorHandler.for \
+        ./MPMDynamicExplicit.FOR \
+        ./MPMConstruction.FOR \
+        ./Kernel.for \
+        ./Anura3D.for
 
 # Target executable
 TARGET := Anura3D$(EXE)
 
-# Compilation rule for Fortran files
-%.obj: %.f90
-	$(fortran_compiler) $(compiler_flags) -c $< -o $@
-
-# Linking rule
-$(TARGET): $(object_files)
-	$(fortran_compiler) $(compiler_flags) $^ -o $@
+all:
+	@echo "Compiling in order..."
+	for file in $(source_files); do \
+		$(fortran_compiler) $(compiler_flags) -c $$file || exit 1; \
+	done
+	@echo "Linking..."
+	$(fortran_compiler) $(compiler_flags) *.o -o $(TARGET)
 
 # Phony target for cleaning
 .PHONY: clean
 clean:
-	$(remove_files_command) *.obj *.mod *genmod*.f90 *.pdb *.ilk $(TARGET)
+	$(remove_files_command) *.o *.mod *genmod*.f90 *.pdb *.ilk $(TARGET)

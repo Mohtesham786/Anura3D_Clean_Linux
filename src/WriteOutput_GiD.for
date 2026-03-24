@@ -72,13 +72,14 @@
 	
 	!Local variables
     integer(INTEGER_TYPE) :: I,J,NumberMaterialPoints       !ID material points
-	integer(INTEGER_TYPE) :: TimeStep, IDim, NVECTOR, NumberElements, NNodes, NoMPs
+	integer(INTEGER_TYPE) :: IDim, NVECTOR, NumberElements, NNodes, NoMPs
+        real(GID_REAL_KIND) :: TimeStep
     integer(INTEGER_TYPE), dimension(3) :: NMATElem
     integer(INTEGER_TYPE), dimension(4) :: MatType = 0.0
     real(REAL_TYPE), dimension(3) :: MPCo = 0.0 ! dimensions 3D and 2D
    
     NumberMaterialPoints = Counters%NParticles      ! Total number of material points
-    TimeStep = CalParams%IStep                      ! Time step
+    TimeStep = GID_REAL(CalParams%IStep)            ! Time step
     NumberElements = Counters%NEl                   ! Total number of elements
     NNodes = Counters%NodTot                        ! Total number of nodes
     NVECTOR = NDIM                                  ! Dimension
@@ -178,7 +179,7 @@
     Logical :: Hasvalue, file_exists
     
     NumberMaterialPoints = Counters%NParticles   
-    TimeStep = CalParams%IStep                   
+    TimeStep = GID_REAL(CalParams%IStep)                   
 	TimeStepInt = TimeStep
     
     ARCH_POST_RES = trim(CalParams%FileNames%ProjectName)//'.POST.RES'
@@ -927,7 +928,7 @@
     Character (len=5) :: J_str
     
     NumberMaterialPoints = Counters%NParticles   
-    TimeStep = CalParams%IStep                   
+    TimeStep = GID_REAL(CalParams%IStep)                   
     NumberElements = Counters%NEl                   
     NNodes = Counters%NodTot                        
     NVECTOR = NDIM                                 
@@ -1874,7 +1875,8 @@
 	!Local variables
     integer(INTEGER_TYPE) :: I,J, K, NumberMaterialPoints       
     integer(INTEGER_TYPE) :: IDim, NVECTOR, NumberElements, NNodes
-	real(REAL_TYPE) :: TimeStep, TimeStepEnd
+    real(GID_REAL_KIND) :: TimeStep
+    real(REAL_TYPE) :: TimeStepEnd
     real(REAL_TYPE) :: EpsD, SigD, EpsI, MLiquid, MSolid, PWP, Wvolstrain, Liqw, Solidw
     real(REAL_TYPE) :: EpsD_Vol, Eps(3), mean_stress, Strain(6), Stress(6)
     integer(INTEGER_TYPE), dimension(3) :: NMATElem
@@ -1885,7 +1887,7 @@
     Character (len=200) :: ARCH_POST_RES
     
     NumberMaterialPoints = Counters%NParticles   
-    TimeStep = CalParams%IStep                   
+    TimeStep = REAL(CalParams%IStep, KIND=GID_REAL_KIND)                   
     NumberElements = Counters%NEl                   
     NNodes = Counters%NodTot                        
     NVECTOR = NDIM                                                   

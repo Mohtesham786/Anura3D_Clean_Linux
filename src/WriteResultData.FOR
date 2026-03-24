@@ -53,9 +53,9 @@
       use ModWriteNodalData
       use ModWriteMPMData 
       use ModFeedback
-      use WriteOutput_GiD
+   !  use WriteOutput_GiD
       use ModString
-      use kernel32
+   !  use kernel32
       use ModFileIO
       
 #ifdef __INTEL_COMPILER
@@ -111,13 +111,13 @@
 
           if (WriteQuickOutput) then ! QuickCheckOutput: time step result at first time step of first load step
               if (CalParams%Visualization=='GiD-ASCII') then
-                  call WriteGiDMeshASCII
-                  call WriteGiDResultsASCII
+       !         call WriteGiDMeshASCII
+       !         call WriteGiDResultsASCII
               else if (CalParams%Visualization=='GiD-Binary') then
-                  call WriteGiDResultsBIN()
+       !          call WriteGiDResultsBIN()
               elseif (CalParams%Visualization=='Paraview-GiD') then
                   call WriteResultsOfOneStep(Filename)
-                  call WriteGiDResultsBIN()
+       !          call WriteGiDResultsBIN()
               else
                   call WriteResultsOfOneStep(Filename)
               endif
@@ -244,13 +244,13 @@
 
           if(NFORMULATION==1) then
               if (CalParams%Visualization=='GiD-ASCII') then
-                  call WriteGiDMeshASCII
-                  call WriteGiDResultsASCII
+       !           call WriteGiDMeshASCII
+       !           call WriteGiDResultsASCII
               else if (CalParams%Visualization=='GiD-Binary') then
-                  call WriteGiDResultsBIN()
+       !           call WriteGiDResultsBIN()
               elseif (CalParams%Visualization=='Paraview-GiD') then
                   call WriteResultsOfOneStep(Filename)
-                  call WriteGiDResultsBIN()
+       !           call WriteGiDResultsBIN()
               else
                   call WriteResultsOfOneStep(Filename)
               endif

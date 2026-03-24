@@ -57,8 +57,8 @@
       use ModLiquid
       use ModTwoLayerFormulation
       use ModExternalSoilModel
-      use user32
-      use kernel32
+      ! use user32
+      ! use kernel32
       use ModMPMDYN2PhaseSP
        
       contains	  

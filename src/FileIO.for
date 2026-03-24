@@ -175,31 +175,19 @@
         end subroutine FileOpenAppend
 
 
-      Logical Function FExist(FName)
+      logical function FExist(FName) result(DoesExist)
         !*************************************************************************************
         !    Function: FExist
         !
         !    DESCRIPTION: Check if File "FName" exists
         !
         !*************************************************************************************
-      Character FName*(*)
-      Logical Tmp
-      Tmp=.False.
-      goto 2
+        implicit none
+        character(len=*), intent(in) :: FName
+       
+        inquire(file=trim(FName), exist=DoesExist)
 
-      Goto 1
-      Open( 1,file=FName,Status='OLD',Err=1)
-      Tmp=.True.
-      Close(1)
-    1 Continue
-      Inquire(File=FName,Exist=Tmp)
-      FExist=Tmp
-      Return
-
-    2 Call UniFExist( fName, Tmp )
-      FExist=Tmp
-      Return
-      End
+      end function FExist
 
       Subroutine FindIO(ioMin,io)
         !*************************************************************************************
@@ -301,10 +289,11 @@
         !
         !*************************************************************************************
       Character fName*(*)
-      Logical fExist
+      Logical DoesExist
       Call UniEraseFile ( fName )
       Return
-      If (fExist(fName)) Then
+      Call UniFExist(fName, DoesExist)
+      If (DoesExist) Then
         Call FindIO(10,io)
         Open(io,file=fName)
         Close(io,Status='Delete')

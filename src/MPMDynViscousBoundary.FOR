@@ -503,9 +503,9 @@
                             Vec2(IDim) = NodalOriginalCoord(DummyNode(3), IDim) - NodalOriginalCoord(DummyNode(1), IDim)                    
                           end do
                           Normal = CrossProduct(Vec1, Vec2) ! calculate the normal and determine its direction
-                          ScalarProduct(1) = DotProduct((/1.0,0.0,0.0/),Normal,3) 
-                          ScalarProduct(2) = DotProduct((/0.0,1.0,0.0/),Normal,3) 
-                          ScalarProduct(3) = DotProduct((/0.0,0.0,1.0/),Normal,3)
+                          ScalarProduct(1) = DotProduct((/1.0d0,0.0d0,0.0d0/),Normal,3) 
+                          ScalarProduct(2) = DotProduct((/0.0d0,1.0d0,0.0d0/),Normal,3)
+                          ScalarProduct(3) = DotProduct((/0.0d0,0.0d0,1.0d0/),Normal,3)
                           ! calculate area of absorbing boundary surface 
                           ElmSurfaceArea(ElementID) = Length(Normal, 3) / 2.0
                           ! calculate contribution to each adjacent node
@@ -597,9 +597,9 @@
                             Vec2(IDim) = NodalOriginalCoord(DummyNode(3), IDim) - NodalOriginalCoord(DummyNode(1), IDim)                    
                           end do
                           Normal = CrossProduct(Vec1, Vec2) ! calculate the normal and determine its direction
-                          ScalarProduct(1) = DotProduct((/1.0,0.0,0.0/),Normal,3)
-                          ScalarProduct(2) = DotProduct((/0.0,1.0,0.0/),Normal,3)
-                          ScalarProduct(3) = DotProduct((/0.0,0.0,1.0/),Normal,3)
+                          ScalarProduct(1) = DotProduct((/1.0d0,0.0d0,0.0d0/),Normal,3)
+                          ScalarProduct(2) = DotProduct((/0.0d0,1.0d0,0.0d0/),Normal,3)
+                          ScalarProduct(3) = DotProduct((/0.0d0,0.0d0,1.0d0/),Normal,3)
                           ! calculate area of absorbing boundary surface 
                           ElmSurfaceArea(ElementID) = Length(Normal, 3) / 2.0
                           ! calculate contribution to each adjacent node
@@ -691,9 +691,9 @@
                             Vec2(IDim) = NodalOriginalCoord(DummyNode(3), IDim) - NodalOriginalCoord(DummyNode(1), IDim)                    
                           end do
                           Normal = CrossProduct(Vec1, Vec2) ! calculate the normal and determine its direction
-                          ScalarProduct(1) = DotProduct((/1.0,0.0,0.0/),Normal,3)
-                          ScalarProduct(2) = DotProduct((/0.0,1.0,0.0/),Normal,3)
-                          ScalarProduct(3) = DotProduct((/0.0,0.0,1.0/),Normal,3)
+                          ScalarProduct(1) = DotProduct((/1.0d0,0.0d0,0.0d0/),Normal,3)
+                          ScalarProduct(2) = DotProduct((/0.0d0,1.0d0,0.0d0/),Normal,3)
+                          ScalarProduct(3) = DotProduct((/0.0d0,0.0d0,1.0d0/),Normal,3)
                           ! calculate area of absorbing boundary surface 
                           ElmSurfaceArea(ElementID) = Length(Normal, 3) / 2.0
                           ! calculate contribution to each adjacent node
