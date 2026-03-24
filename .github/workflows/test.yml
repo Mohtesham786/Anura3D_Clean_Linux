@@ -57,8 +57,7 @@ jobs:
           echo "==== initial wave folder contents ===="
           ls -lah
 
-          echo "==== STEP 1: run CPS_001 only ===="
-          mv wave_small.CPS_002 wave_small.CPS_002.bak
+          echo "==== STEP 1: first run ===="
           ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small_step1.log
 
           echo "==== after STEP 1 ===="
@@ -69,9 +68,7 @@ jobs:
             exit 1
           fi
 
-          mv wave_small.CPS_002.bak wave_small.CPS_002
-
-          echo "==== STEP 2: run CPS_002 using generated BRF_001 ===="
+          echo "==== STEP 2: second run using generated BRF_001 ===="
           ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small_step2.log
 
           echo "==== final wave folder contents ===="
@@ -142,11 +139,12 @@ jobs:
           done < benchmark_dirs.txt
       
       - name: Upload wave benchmark outputs
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-         name: wave-benchmark-output
-         path: |
-           Benchmarks/wave/*
+          name: wave-benchmark-output
+          path: |
+            Benchmarks/wave/*
       
       # Structure to save a file
       # - name: Upload output file
