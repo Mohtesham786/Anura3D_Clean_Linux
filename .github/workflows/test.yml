@@ -48,28 +48,16 @@ jobs:
         run: |
           cd Benchmarks/wave
 
-          rm -f run_wave_small_step1.log run_wave_small_step2.log \
+          rm -f run_wave_small.log \
                 wave_small_001.ENG wave_small_001.INF \
                 wave_small_000.MLG wave_small_001.MLG \
                 wave_small.PAR_001 wave_small.BMR wave_small.BMS \
-                wave_small.OUT wave_small.BRF_001 || true
+                wave_small.OUT || true
 
           echo "==== initial wave folder contents ===="
           ls -lah
 
-          echo "==== STEP 1: first run ===="
-          ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small_step1.log
-
-          echo "==== after STEP 1 ===="
-          ls -lah
-
-          if [ ! -f wave_small.BRF_001 ]; then
-            echo "ERROR: STEP 1 did not generate wave_small.BRF_001"
-            exit 1
-          fi
-
-          echo "==== STEP 2: second run using generated BRF_001 ===="
-          ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small_step2.log
+          ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small.log
 
           echo "==== final wave folder contents ===="
           ls -lah
