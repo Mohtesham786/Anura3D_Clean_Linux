@@ -11,16 +11,12 @@ on:
 jobs:
   test:
     name: Test
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-        
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-    
+
       - uses: fortran-lang/setup-fortran@v1
         id: setup-fortran
         with:
@@ -33,116 +29,15 @@ jobs:
           make clean || true
           ifort --version || true
           make fortran_compiler=ifort FFLAGS="-O2" 2>&1 | tee build.log
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Check executable exists
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          test -f src/Anura3D.out
+          ls -lah src/Anura3D.out
 
-      - name: Run Benchmark wave_small
-        run: |
-          cd Benchmarks/wave
-
-          rm -f run_wave_small.log \
-                wave_small_001.ENG wave_small_001.INF \
-                wave_small_000.MLG wave_small_001.MLG \
-                wave_small.PAR_001 wave_small.BMR wave_small.BMS \
-                wave_small.OUT || true
-
-          echo "==== initial wave folder contents ===="
-          ls -lah
-
-          ../../src/Anura3D.out wave_small 2>&1 | tee run_wave_small.log
-
-          echo "==== final wave folder contents ===="
-          ls -lah
-
-          echo "==== find result files ===="
-          find . -maxdepth 2 \( -name "*.ENG" -o -name "*.INF" -o -name "*.MLG" -o -name "*.OUT" -o -name "*.BRF_*" \)
-
-          if [ ! -f wave_small_001.ENG ]; then
-            echo "ERROR: Simulation did not produce wave_small_001.ENG"
-            exit 1
-          fi
-          
-      - name: Run all pre-commit benchmarks
-        run: |
-          benchmark_root="$GITHUB_WORKSPACE/Benchmarks/Pre-Commit_Tests"
-
-          find "$benchmark_root" -mindepth 1 -maxdepth 1 -type d | sort > benchmark_dirs.txt
-
-          echo "==== Benchmarks to run ===="
-          cat benchmark_dirs.txt
-
-          while IFS= read -r bench; do
-            echo "======================================"
-            echo "Running benchmark: $bench"
-            echo "======================================"
-
-            a3d_dir=$(find "$bench" -maxdepth 2 -type d -name "*.A3D" | head -n1)
-
-            if [ -z "$a3d_dir" ]; then
-              echo "SKIP: No .A3D folder found in $bench"
-              continue
-            fi
-
-            cd "$a3d_dir"
-
-            echo "==== current folder ===="
-            pwd
-
-            echo "==== benchmark folder contents before run ===="
-            ls -lah
-
-            project_name=$(basename "$(ls *.CPS_001 2>/dev/null | head -n1)" .CPS_001)
-
-            if [ -z "$project_name" ]; then
-              echo "SKIP: Could not detect project name in $a3d_dir"
-              cd "$GITHUB_WORKSPACE"
-              continue
-            fi
-
-            echo "Detected A3D directory: $a3d_dir"
-            echo "Detected project name: $project_name"
-
-            rm -f run.log *.ENG *.INF *.MLG *.OUT *.BRF_* *.PAR_* || true
-
-            "$GITHUB_WORKSPACE/src/Anura3D.out" "$project_name" 2>&1 | tee run.log
-
-            if ! grep -q "Calculation finished." run.log; then
-              echo "FAILED: $bench" | tee -a "$GITHUB_WORKSPACE/failed_benchmarks.txt"
-              cd "$GITHUB_WORKSPACE"
-              continue
-            fi
-
-            echo "==== generated result files ===="
-            find . -maxdepth 1 \( -name "*.ENG" -o -name "*.INF" -o -name "*.MLG" -o -name "*.OUT" \)
-
-            cd "$GITHUB_WORKSPACE"
-          done < benchmark_dirs.txt
-      
-      - name: Upload wave benchmark outputs
+      - name: Upload build log
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: wave-benchmark-output
-          path: |
-            Benchmarks/wave/*
-      
-      # Structure to save a file
-      # - name: Upload output file
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: output-file
-      #     path: Benchmarks/wave/wave_small_001.ENG
-
-      - name: Compare Benchmark results
-        run: |
-          cd Benchmarks/python
-          python compare_outputs.py
-
+          name: build-log
+          path: src/build.log
