@@ -1,28 +1,73 @@
 
 Anura3D: Numerical modelling and simulation of large deformationsand soil–water–structure interaction using the material point method (MPM)
-Kernel name       : /home/mohtesham_10/Anura3D_Clean_Linux/src/Anura3D.out
+Kernel name       : F:\MPM_calculations\TestRelease2025\ColumCollapse.A3D\Anura3D_2025.exe
 Kernel version    : 2021.1.0.=
 Last update date  :
 Last compiled date: 2022-03-07 12:50:34.556
 
-Project name: ColumCollapse
-Reading CPS file: ColumCollapse.CPS_001
+Project name: F:\MPM_calculations\TestRelease2025\ColumCollapse.A3D\ColumCollapse
+Reading CPS file: F:\MPM_calculations\TestRelease2025\ColumCollapse.A3D\ColumCollapse.CPS_002
 Reading... ### Anura3D_2025 ###
-[WARNING] : (time step:      1) CPS file: Default value of $$GRAVITY_ACCELERATION changed.
-Reading GOM file (Materials): ColumCollapse.GOM_stage0
+Reading GOM file (Materials): F:\MPM_calculations\TestRelease2025\ColumCollapse.A3D\ColumCollapse.GOM_stage1
 Reading... ### Anura3D_2025 ###
 Loading constitutive model... mohr_coulomb
 Loading constitutive model... linear_elasticity
-Reading GOM file (Geometry): ColumCollapse.GOM_stage0
+Reading GOM file (Geometry): F:\MPM_calculations\TestRelease2025\ColumCollapse.A3D\ColumCollapse.GOM_stage1
 Reading... ### Anura3D_2025 ###
-Reading OPD file: ColumCollapse.OPD_stage0
-Calculation of load step      1
- MaxWaveSpeed :    0.7127E+002
- MinTimeStep  :    0.7685E-003
- TimeIncrement:    0.7531E-003
+Reading OPD file: F:\MPM_calculations\TestRelease2025\ColumCollapse.A3D\ColumCollapse.OPD_stage1
+Calculation of load step      2
+Calculation of load step      3
+Calculation of load step      4
+Calculation of load step      5
+Calculation of load step      6
+Calculation of load step      7
+Calculation of load step      8
+Calculation of load step      9
+Calculation of load step     10
+Calculation of load step     11
+Calculation of load step     12
+Calculation of load step     13
+Calculation of load step     14
+Calculation of load step     15
+Calculation of load step     16
+Calculation of load step     17
+Calculation of load step     18
+Calculation of load step     19
+Calculation of load step     20
+Calculation of load step     21
+Calculation of load step     22
+Calculation of load step     23
+Calculation of load step     24
+Calculation of load step     25
+Calculation of load step     26
+Calculation of load step     27
+Calculation of load step     28
+Calculation of load step     29
+Calculation of load step     30
+Calculation of load step     31
+Calculation of load step     32
+Calculation of load step     33
+Calculation of load step     34
+Calculation of load step     35
+Calculation of load step     36
+Calculation of load step     37
+Calculation of load step     38
+Calculation of load step     39
+Calculation of load step     40
+Calculation of load step     41
+Calculation of load step     42
+Calculation of load step     43
+Calculation of load step     44
+Calculation of load step     45
+Calculation of load step     46
+Calculation of load step     47
+Calculation of load step     48
+Calculation of load step     49
+Calculation of load step     50
+Calculation of load step     51
   Item  Name of subroutine/function/procedure        Times Time per call Total time (se Percentage
-     1| Main                                    |        1|   0.3217E+001|   0.3217E+001|100.00%
+     1| Main                                    |        1|   0.3433E+003|   0.3433E+003|100.00%
      2| Initialisation                          |        1|   0.0000E+000|   0.0000E+000|  0.00%
-     3| LoadStep                                |        1|   0.3100E+001|   0.3100E+001| 96.38%
-     4| WriteResults                            |        1|   0.2838E+000|   0.2838E+000|  8.82%
+     3| LoadStep                                |       50|   0.6863E+001|   0.3432E+003| 99.97%
+     4| WriteResults                            |       50|   0.6031E+001|   0.3016E+003| 87.85%
 Calculation finished.
