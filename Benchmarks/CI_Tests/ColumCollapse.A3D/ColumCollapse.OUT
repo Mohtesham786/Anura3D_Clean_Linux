@@ -1,0 +1,28 @@
+
+Anura3D: Numerical modelling and simulation of large deformationsand soil–water–structure interaction using the material point method (MPM)
+Kernel name       : /home/mohtesham_10/Anura3D_Clean_Linux/src/Anura3D.out
+Kernel version    : 2021.1.0.=
+Last update date  :
+Last compiled date: 2022-03-07 12:50:34.556
+
+Project name: ColumCollapse
+Reading CPS file: ColumCollapse.CPS_001
+Reading... ### Anura3D_2025 ###
+[WARNING] : (time step:      1) CPS file: Default value of $$GRAVITY_ACCELERATION changed.
+Reading GOM file (Materials): ColumCollapse.GOM_stage0
+Reading... ### Anura3D_2025 ###
+Loading constitutive model... mohr_coulomb
+Loading constitutive model... linear_elasticity
+Reading GOM file (Geometry): ColumCollapse.GOM_stage0
+Reading... ### Anura3D_2025 ###
+Reading OPD file: ColumCollapse.OPD_stage0
+Calculation of load step      1
+ MaxWaveSpeed :    0.7127E+002
+ MinTimeStep  :    0.7685E-003
+ TimeIncrement:    0.7531E-003
+  Item  Name of subroutine/function/procedure        Times Time per call Total time (se Percentage
+     1| Main                                    |        1|   0.3217E+001|   0.3217E+001|100.00%
+     2| Initialisation                          |        1|   0.0000E+000|   0.0000E+000|  0.00%
+     3| LoadStep                                |        1|   0.3100E+001|   0.3100E+001| 96.38%
+     4| WriteResults                            |        1|   0.2838E+000|   0.2838E+000|  8.82%
+Calculation finished.

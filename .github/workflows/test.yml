@@ -35,6 +35,39 @@ jobs:
           test -f src/Anura3D.out
           ls -lah src/Anura3D.out
 
+      - name: Run Benchmark ColumCollapse
+        run: |
+          cd Benchmarks/CI_Tests/ColumCollapse.A3D
+
+          echo "==== running ColumCollapse benchmark ===="
+          pwd
+          ls -lah
+
+          project_name=$(basename "$(ls *.CPS_001 | head -n1)" .CPS_001)
+          echo "Project: $project_name"
+
+          rm -f run.log *.ENG *.INF *.MLG *.ERR *.PROC *.RX *.BRF_* *.vtk || true
+
+          "$GITHUB_WORKSPACE/src/Anura3D.out" "$project_name" 2>&1 | tee run.log
+
+          grep "Calculation finished." run.log
+
+          if ! grep -q "Calculation finished." run.log; then
+            echo "ERROR: ColumCollapse benchmark failed"
+            exit 1
+          fi
+
+          test -f "${project_name}_001.ENG"
+          test -f "${project_name}_001.INF"
+
+      - name: Upload benchmark outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: columcollapse-output
+          path: |
+            Benchmarks/CI_Tests/ColumCollapse.A3D/*
+
       - name: Upload build log
         if: always()
         uses: actions/upload-artifact@v4

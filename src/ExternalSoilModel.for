@@ -182,11 +182,7 @@ implicit none
     cmname = UMAT_MOHR_COULOMB_STANDARD
     endif          
     ! initialise UMAT
-    if ((CalParams%CPSversion==Anura3D_v2024).or.(CalParams%CPSversion==Anura3D_v2025)) then
     ESM => MatParams(IDSet)%ESM_POINTER
-    else
-    !ESM = GetProcAddress(MatParams(IDSet)%SoilModelDLLHandle) 
-    end if
     call ESM(IDpt, IDel, IDset, Stress, Eunloading, PlasticMultiplier, StrainIncr, NSTATEVAR, StateVar, nAddVar, AdditionalVar,cmname, NPROPERTIES, props, CalParams%NumberOfPhases, ntens)
     ! save unloading stiffness in Particles array  
     Particles(IDpt)%ESM_UnloadingStiffness = Eunloading
